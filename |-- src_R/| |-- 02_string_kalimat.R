@@ -9,6 +9,8 @@ print(K2)
 print(K3)
 print(K4)
 
+
+
 #Kondisi Kedua
 K1 <- "Pagi ini cuacanya sangat cerah."
 K2 <- "Ayah berkata, 'Jangan lupa sarapan sebelum berangkat'."
@@ -19,6 +21,8 @@ print(K1)
 print(K2)
 print(K3)
 print(K4)
+
+
 
 #Kondisi Ketiga
 K1 <- "Membaca buku dapat menambah wawasan."
