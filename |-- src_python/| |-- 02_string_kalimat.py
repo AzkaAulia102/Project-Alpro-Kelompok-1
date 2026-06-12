@@ -7,3 +7,8 @@ print(K1)
 print(K2)
 print(K3)
 print(K4)
+
+Saya tak 'kan menyerah.
+Ia berkata, "Aku menyayangimu."
+"Coba jelaskan pengertian 'cross-validation' dalam Machine Learning!"
+Surat keputusan itu bernomor 62/UN.34/19/2023.
