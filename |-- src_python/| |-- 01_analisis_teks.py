@@ -3,5 +3,3 @@ daftar_kata = teks.split()
 jumlah_kata = len(daftar_kata)
 jumlah_kalimat = teks.count(".")
 print(f"Teks tersebut memuat {jumlah_kalimat} kalimat dan {jumlah_kata} kata.")
-
-Teks tersebut memuat 5 kalimat dan 92 kata.
