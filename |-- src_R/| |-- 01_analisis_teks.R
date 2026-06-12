@@ -13,7 +13,5 @@ for (karakter in kumpulan_karakter) {
 jumlah_kata <- jumlah_spasi + 1
 
 print(paste("Jumlah Kalimat =", jumlah_kalimat))
-## [1] "Jumlah Kalimat = 5"
-print(paste("Jumlah Kata =", jumlah_kata))
-## [1] "Jumlah Kata = 92"
 
+print(paste("Jumlah Kata =", jumlah_kata))
