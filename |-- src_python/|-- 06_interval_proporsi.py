@@ -18,6 +18,7 @@ n = int(input("masukkan ukuran sampel (n):"))
 a = float(input("masukkan alpha (0.1/0.05):"))
 hasil = hitung_interval(p, n, a)
 print(f"interval: {hasil}")
+
 masukkan proporsi (p):0.5
 masukkan ukuran sampel (n):100
 masukkan alpha (0.1/0.05):0.05
@@ -32,6 +33,7 @@ n = int(input("masukkan ukuran sampel (n):"))
 a = float(input("masukkan alpha (0.1/0.05):"))
 hasil = hitung_interval(p, n, a)
 print(f"interval: {hasil}")
+
 masukkan proporsi (p):1.5
 error: proporsi harus > 0 dan <= 1
 
@@ -44,6 +46,7 @@ n = int(input("masukkan ukuran sampel (n):"))
 a = float(input("masukkan alpha (0.1/0.05):"))
 hasil = hitung_interval(p, n, a)
 print(f"interval: {hasil}")
+
 masukkan proporsi (p):0
 masukkan ukuran sampel (n):50
 masukkan alpha (0.1/0.05):0.1
