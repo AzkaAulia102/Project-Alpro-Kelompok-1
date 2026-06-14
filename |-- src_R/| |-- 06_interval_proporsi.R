@@ -15,4 +15,11 @@ upper <- round(p + ME, 3)
 return(paste("Interval konfidensi: [", lower, ",", upper, "]")) 
 } 
 
+#kondisi 1(normal)
 print(interval_proporsi(0.5,100,0.05))
+
+#kondisi 2
+print(interval_proporsi(1.5, 100, 0.05))
+
+#kondisi 3
+print(interval_proporsi(0, 50, 0.1))
