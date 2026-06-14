@@ -1,26 +1,45 @@
-cluster_a <- c(2, 1, 3)
-cluster_b <- c(1, -4, 6)
-cluster_c <- c(-2, 3, -2)
+A <- c(2, 1, 3)
+B <- c(1, -4, 6)
+C <- c(-2, 3, -2)
 
-hitung_jarak <- function(u, cluster){
-  sqrt(sum((u - cluster)^2))
-}
+U <- c(1, 2, 3)
 
-# Input langsung
-u <- c(1, 2, 3)
+x1 <- U[1]
+x2 <- U[2]
+x3 <- U[3]
 
-jarak_a <- hitung_jarak(u, cluster_a)
-jarak_b <- hitung_jarak(u, cluster_b)
-jarak_c <- hitung_jarak(u, cluster_c)
+jarak_A <- sqrt((x1 - A[1])^2 +
+                  (x2 - A[2])^2 +
+                  (x3 - A[3])^2)
 
-if(jarak_a <= jarak_b && jarak_a <= jarak_c){62
-  hasil <- "Cluster A"
-} else if(jarak_b <= jarak_a && jarak_b <= jarak_c){
-  hasil <- "Cluster B"
+jarak_B <- sqrt((x1 - B[1])^2 +
+                  (x2 - B[2])^2 +
+                  (x3 - B[3])^2)
+
+jarak_C <- sqrt((x1 - C[1])^2 +
+                  (x2 - C[2])^2 +
+                  (x3 - C[3])^2)
+
+minimum <- min(jarak_A, jarak_B, jarak_C)
+
+jumlah_minimum <- sum(
+  c(jarak_A, jarak_B, jarak_C) == minimum
+)
+
+if (jumlah_minimum > 1) {
+  
+  cat("Tepat di Perbatasan")
+  
+} else if (minimum == jarak_A) {
+  
+  cat("Cluster A")
+  
+} else if (minimum == jarak_B) {
+  
+  cat("Cluster B")
+  
 } else {
-  hasil <- "Cluster C"
+  
+  cat("Cluster C")
+  
 }
-
-cat("Titik U termasuk", hasil)
-## Titik U termasuk Cluster A
-
