@@ -1,18 +1,37 @@
 import math
 
-def hitung_jarak(titik1, titik2):
-    return math.sqrt(
-        (titik1[0] - titik2[0])**2 +
-        (titik1[1] - titik2[1])**2 +
-        (titik1[2] - titik2[2])**2
-    )
+A = (2, 1, 3)
+B = (1, -4, 6)
+C = (-2, 3, -2)
 
-cluster_a = (2, 1, 3)
-cluster_b = (1, -4, 6)
-cluster_c = (-2, 3, -2)
+x1 = 1
+x2 = 2
+x3 = 3
 
-titik_u = (2, 1, 3)
+jarak_A = math.sqrt((x1 - A[0])**2 +
+                    (x2 - A[1])**2 +
+                    (x3 - A[2])**2)
 
-jarak_a = hitung_jarak(titik_u, cluster_a)
-jarak_b = hitung_jarak(titik_u, cluster_b)
-jarak_c = hitung_jarak(titik_u, cluster_c)
+jarak_B = math.sqrt((x1 - B[0])**2 +
+                    (x2 - B[1])**2 +
+                    (x3 - B[2])**2)
+
+jarak_C = math.sqrt((x1 - C[0])**2 +
+                    (x2 - C[1])**2 +
+                    (x3 - C[2])**2)
+
+minimum = min(jarak_A, jarak_B, jarak_C)
+
+jumlah_minimum = [jarak_A, jarak_B, jarak_C].count(minimum)
+
+if jumlah_minimum > 1:
+    print("Tepat di Perbatasan")
+
+elif minimum == jarak_A:
+    print("Cluster A")
+
+elif minimum == jarak_B:
+    print("Cluster B")
+
+else:
+    print("Cluster C")
