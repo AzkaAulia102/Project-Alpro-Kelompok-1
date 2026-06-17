@@ -34,5 +34,6 @@ U2 = (1.5, -1.5, 4.5)
 print("Titik", U1, "->", tentukan_cluster(U1))
 print("Titik", U2, "->", tentukan_cluster(U2))
 
+Output
 Titik (1, 2, 3) -> Cluster A
 Titik (1.5, -1.5, 4.5) -> Tepat di Perbatasan
