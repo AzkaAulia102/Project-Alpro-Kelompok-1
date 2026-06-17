@@ -1,37 +1,38 @@
+
 import math
 
-A = (2, 1, 3)
-B = (1, -4, 6)
-C = (-2, 3, -2)
+def hitung_jarak(titik, pusat):
+    return math.sqrt(
+        (titik[0] - pusat[0])**2 +
+        (titik[1] - pusat[1])**2 +
+        (titik[2] - pusat[2])**2
+    )
 
-x1 = 1
-x2 = 2
-x3 = 3
+def tentukan_cluster(U):
+    A = (2, 1, 3)
+    B = (1, -4, 6)
+    C = (-2, 3, -2)
 
-jarak_A = math.sqrt((x1 - A[0])**2 +
-                    (x2 - A[1])**2 +
-                    (x3 - A[2])**2)
+    jarak_A = hitung_jarak(U, A)
+    jarak_B = hitung_jarak(U, B)
+    jarak_C = hitung_jarak(U, C)
 
-jarak_B = math.sqrt((x1 - B[0])**2 +
-                    (x2 - B[1])**2 +
-                    (x3 - B[2])**2)
+    minimum = min(jarak_A, jarak_B, jarak_C)
 
-jarak_C = math.sqrt((x1 - C[0])**2 +
-                    (x2 - C[1])**2 +
-                    (x3 - C[2])**2)
+    if [jarak_A, jarak_B, jarak_C].count(minimum) > 1:
+        return "Tepat di Perbatasan"
+    elif minimum == jarak_A:
+        return "Cluster A"
+    elif minimum == jarak_B:
+        return "Cluster B"
+    else:
+        return "Cluster C"
 
-minimum = min(jarak_A, jarak_B, jarak_C)
+U1 = (1, 2, 3)
+U2 = (1.5, -1.5, 4.5)
 
-jumlah_minimum = [jarak_A, jarak_B, jarak_C].count(minimum)
+print("Titik", U1, "->", tentukan_cluster(U1))
+print("Titik", U2, "->", tentukan_cluster(U2))
 
-if jumlah_minimum > 1:
-    print("Tepat di Perbatasan")
-
-elif minimum == jarak_A:
-    print("Cluster A")
-
-elif minimum == jarak_B:
-    print("Cluster B")
-
-else:
-    print("Cluster C")
+Titik (1, 2, 3) -> Cluster A
+Titik (1.5, -1.5, 4.5) -> Tepat di Perbatasan
